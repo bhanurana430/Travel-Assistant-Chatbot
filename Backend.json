@@ -1,0 +1,175 @@
+{
+    "intents": [
+        {
+            "is_independent": true,
+            "intent_name": "greet",
+            "keywords": ["hello", "hi", "hey"],
+            "answers": ["It is nice to meet you! I can help you find flights, hotels and suggest the perfect destination for you.\nWhat would you like to do first?"],
+            "next_expectation": ""
+        },
+        {
+            "is_independent": true,
+            "intent_name": "farewell",
+            "keywords": ["bye", "goodbye", "see you", "farewell", "adios"],
+            "answers": [
+                "Bye!", 
+                "Goodbye!", 
+                "See you!"
+            ],
+            "next_expectation": ""
+        },
+        {
+            "is_independent": true,
+            "intent_name": "flight_search",
+            "keywords": ["flight", "airline", "ticket", "airfare", "fly", "flights"],
+            "answers": ["Of course! I can help you find a flight. What's your origin city?"],
+            "next_expectation": "originCity"
+        },
+        {
+            "is_independent": true,
+            "intent_name": "hotel_search",
+            "keywords":  ["hotel", "reservation", "room", "accommodation", "hotels"],
+            "answers": ["Sure, I can help you with that. In which city are you looking for a hotel?"],
+            "next_expectation": "hotelCity"
+        },
+        {
+            "is_independent": true,
+            "intent_name": "suggest_destination",
+            "keywords": ["destination", "where", "destinations", "suggest"],
+            "answers": ["Sure, I'll find the perfect destination for you! First of all, in which season would you like to travel?"],
+            "next_expectation": "season"
+        },
+        {
+            "is_independent": false,
+            "intent_name": "season",
+            "keywords": ["spring", "summer", "autumn", "winter"],
+            "question_weight": 20,
+            "answers": ["Would you prefer an adventurous or a relaxing vacation? Or something in the middle?"],
+            "next_expectation": "adventurous_vs_relaxing"
+        },
+        {
+            "is_independent": false,
+            "intent_name": "adventurous_vs_relaxing",
+            "keywords": ["adventurous", "relaxing", "middle"],
+            "question_weight": 7,
+            "answers": ["Would you like to visit a city or a town?"],
+            "next_expectation": "city_vs_town"
+        },
+        {
+            "is_independent": false,
+            "intent_name": "city_vs_town",
+            "keywords": ["city", "town"],
+            "question_weight": 5,
+            "answers": ["Should the place be modern or historic? Or both?"],
+            "next_expectation": "modern_vs_historic"
+        },
+        {
+            "is_independent": false,
+            "intent_name": "modern_vs_historic",
+            "keywords": ["modern", "historic", "both"],
+            "question_weight": 10,
+            "answers": ["Are you ready to know the answer?"],
+            "next_expectation": "find_destination"
+        }
+],
+
+    "first_message" : "Hi, I am your travel mate! Please greet me and I will tell you what I can do!",
+
+    "fallback_questions":
+        {
+            "general": "I'm sorry, I didn't understand you. Could you rephrase that please?",
+            "originCity": "Please provide a valid origin city!",
+            "destinationCity": "Please provide a valid destination city!",
+            "hotelCity": "Please provide a valid hotel city!",
+            "adults": "Please provide a valid number of adults (1-8).",
+            "departureDate": "Please provide a valid departure date!",
+            "checkInDate": "Please provide a valid check-in date!",
+            "checkOutDate": "Please provide a valid check-out date!"
+        },
+    
+    "message_after" :
+        {
+            "flight_search": "\nWhat would you like to do next?\nSearch for another flight, search for a hotel or get a destination suggestion?",
+            "no_flights_found": "I'm sorry, I couldn't find any flights for the entered data.",
+            "flight_search_error": "I'm sorry, an error occurred while searching for flights",
+            "hotel_search": "\nWhat would you like to do next?\nSearch for another hotel, search for a flight or get a destination suggestion?",          
+            "no_hotels_found" : "I'm sorry, I couldn't find any hotels for the entered data.",
+            "hotel_search_error": "I'm sorry, an error occurred while searching for hotels",
+            "destination": "!\nWould you perhaps like to find a flight or hotel? Or do you want me to suggest you another destination?",
+            "destination_result": "The perfect destination for you is "
+        },
+
+
+    "destinations": [
+            {
+                "destination_name": "New York, USA",
+                "city_vs_town": "city",
+                "modern_vs_historic": "modern",
+                "adventurous_vs_relaxing": "adventurous",
+                "season": "autumn"
+            },
+            {
+                "destination_name": "Rome, Italy",
+                "city_vs_town": "city",
+                "modern_vs_historic": "historic",
+                "adventurous_vs_relaxing": "adventurous",
+                "season": "summer"
+            },
+            {
+                "destination_name": "Victoria, Seychelles",
+                "city_vs_town": "town",
+                "modern_vs_historic": "historic",
+                "adventurous_vs_relaxing": "relaxing",
+                "season": "summer"
+            },
+            {
+                "destination_name": "Perth, Australia",
+                "city_vs_town": "city",
+                "modern_vs_historic": "modern",
+                "adventurous_vs_relaxing": "relaxing",
+                "season": "summer"
+            },
+            {
+                "destination_name": "Edinburgh, Scotland",
+                "city_vs_town": "city",
+                "modern_vs_historic": "historic",
+                "adventurous_vs_relaxing": "middle",
+                "season": "autumn"
+            },
+            {
+                "destination_name": "Munich, Germany",
+                "city_vs_town": "city",
+                "modern_vs_historic": "both",
+                "adventurous_vs_relaxing": "middle",
+                "season": "autumn"
+            },
+            {
+                "destination_name": "Kyoto, Japan",
+                "city_vs_town": "city",
+                "modern_vs_historic": "both",
+                "adventurous_vs_relaxing": "middle",
+                "season": "spring"
+            },
+            {
+                "destination_name": "Paris, France",
+                "city_vs_town": "city",
+                "modern_vs_historic": "both",
+                "adventurous_vs_relaxing": "middle",
+                "season": "spring"
+            },
+            {
+                "destination_name": "Lucerne, Switzerland",
+                "city_vs_town": "city",
+                "modern_vs_historic": "historic",
+                "adventurous_vs_relaxing": "adventurous",
+                "season": "winter"
+            },
+            {
+                "destination_name": "Salzburg, Austria",
+                "city_vs_town": "city",
+                "modern_vs_historic": "historic",
+                "adventurous_vs_relaxing": "middle",
+                "season": "winter"
+            }
+    ]
+}

@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.robotext, .humantext {
+  white-space: pre-wrap; /* CSS property to make whitespace and new lines */
+  word-wrap: break-word; /* CSS property to break words into new lines if they're too long */
+}
+
+.robotext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  overflow-wrap: break-word;
+  max-width: 50vw;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.humantext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  overflow-wrap: break-word;
+  max-width: 50vw;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.background {
+  background-color: #73a9ad;
+  padding: 20px;
+  height: 27vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#dark .background {
+  background-color: #371b58;
+}
+
+.hotellogo img {
+  border-radius: 8px;
+  height: 9vw;
+  width: 9vw;
+}
+
+.flightlogo img {
+  border-radius: 8px;
+  height: 9vw;
+  width: 9vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75vw;
+  height: 25vh;
+  padding: 1vh;
+  margin: auto;
+  background-color: #c4dfdf;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+#dark .header {
+  background-color: #4c3575;
+}
+
+.headertexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+.text {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 3px;
+  /* color: #333333; */
+  width: fit-content;
+  height: fit-content;
+  margin-top: 0;
+  font-size: 3.5vh;
+  /* color: transparent;
+  -webkit-text-stroke: 1px #000000;
+  background: url(back.png);
+  -webkit-background-clip: text;
+  background-position:0 0 ;
+  animation: back 20s linear infinite; */
+}
+/* @keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+} */
+
+#dark .text {
+  color: white;
+}
+
+.undertext {
+  color: #777777;
+  height: fit-content;
+  width: fit-content;
+  /* margin: auto; */
+}
+
+#dark .undertext {
+  color: white;
+}
+
+.centertext {
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: #f8f6f4;
+  color: #555555;
+  margin-top: 2vh;
+  border-radius: 10px;
+  padding: 1vh 2vw;
+}
+
+#dark .centertext {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.mainbody {
+  height: 73vh;
+  background-color: #f5a287;
+  padding-top: 2vh;
+}
+
+#dark .mainbody {
+  background-color: #7858a6;
+}
+
+.chatwindow {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 2vh;
+  margin: auto;
+  overflow-y: auto;
+  min-height: 50vh;
+  max-height: 50vh;
+  width: 90vw;
+}
+
+#dark .chatwindow {
+  background-color: #371b58;
+}
+
+.chatwindow::-webkit-scrollbar {
+  display: none;
+}
+
+.roboavatar {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxk1xTkHnNHJZaYEBA8cWrX-aNOUHUi_rZzQ&usqp=CAU);
+  background-size: 2.8vw 2.8vw;
+  border-radius: 10vh;
+  width: 2.8vw;
+  height: 2.8vw;
+  margin-right: 1vw;
+}
+
+.humanavatar {
+  background-image: url(https://cdn.icon-icons.com/icons2/582/PNG/512/businness-man_icon-icons.com_55047.png);
+  background-size: 2.8vw 2.8vw;
+  border-radius: 50%;
+  width: 2.8vw;
+  height: 2.8vw;
+  margin-left: 1vw;
+}
+
+.robotext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  overflow-wrap: break-word;
+  max-width: 50vw;
+}
+
+.humantext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  overflow-wrap: break-word;
+  max-width: 50vw;
+}
+
+.automsg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  background-color: #e6e6e6;
+  padding: 10px;
+  margin-bottom: 1.5vh;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+#dark .automsg {
+  background-color: #7858a6;
+  color: #ffffff;
+}
+
+.human {
+  align-self: flex-end;
+  margin-bottom: 1.5vh;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5vh;
+}
+
+.inputbar {
+  background-color: #c4dfdf;
+  color: #000000;
+  padding: 2vh;
+  width: 70vw;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 0vh;
+}
+
+#dark .inputbar {
+  background-color: #4c3575;
+  caret-color: white;
+  color: white;
+}
+
+::placeholder {
+  width: fit-content;
+  color: #000000;
+  opacity: 1;
+}
+
+#dark ::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.btn {
+  margin-top: 0vh;
+  padding: 1vh 2vw;
+  cursor: pointer;
+  margin-left: 1vw;
+  text-align: center;
+  height: 6.5vh;
+  border: none;
+}
+
+#dark .btn {
+  background-color: #b700a2;
+}
+
+.btn :hover {
+  background-color: #37e75a;
+  transition: 0.3s;
+}
+
+#dark .btn :hover {
+  background-color: #cf05a6;
+  transition: 0.3s;
+}
+
+.togglebutton {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 93vh;
+  left: 11vw;
+}
+
+#dark .togglebutton label {
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .hotellogo img {
+    display: none;
+  }
+
+  .flightlogo img {
+    display: none;
+  }
+
+  .roboavatar {
+    display: none;
+  }
+  .humanavatar {
+    display: none;
+  }
+
+  .automsg {
+    border-radius: 0px 15px 15px 15px;
+  }
+
+  .human {
+    border-radius: 15px 0px 15px 15px;
+  }
+}
